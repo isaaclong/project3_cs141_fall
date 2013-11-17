@@ -75,8 +75,52 @@ automatically or give you the ability to specify which directory you 'git
 init'-ed.
 
 First we need to 'pull' in order to sync anything already in the online 
-repository to your directory.
+repository to your directory. In the GUI it should be something relatively
+simple, on mac it is command-shift-P to Pull. The Pull command basically
+syncs all files in the online repository and updates your local directory
+files. Below is the terminal command you would use to do it.
 
 $ git pull origin master
- 
 
+^Origin is the remote address specified earlier, master is the branch name.
+
+After doing this pull you should have this README.md file in your
+directory. Now, try opening it and adding your contact information at the 
+top, saving it, and closing it again. Now we can try to push the changes 
+and sync back to the online repository. The 'stages' for a push are as 
+follows:
+ 
+$ git add <filename>
+
+^This file will now be tracked by Git
+
+$ git commit -m "Insert commit message here" 
+
+^Takes a snapshot of your directory files to prepare for a push. A -a arg 
+can be provided to commit so you don't have to 'add' every file each time.
+
+$ git push origin master 
+
+^Pushes any changes to the files in the directory, that you tracked, to 
+the online repository). Origin is the address of the online repository,
+master is the branch.
+
+So the basic order of operations for pushes/updating our shared files
+online is:
+
+*Make some changes to the files
+*git add - stages changes for commit
+*git commit - commits staged changes locally
+*git push - pushes committed changes to remote address we specified
+
+This probably seems like a lot but it takes literally about 5 seconds once
+you get the hang of it. The more general order of operations is:
+
+*Call pull so that your directory files will be updated with the most
+recent changes in our shared files online
+*Make any changes you want
+*Push the changes back to the online files
+
+Doing all this in the GUI is even faster. Pushes and Pulls can also specify
+branches (other than master, which is the main branch). We can talk about
+branches together when we meet next.
