@@ -6,7 +6,7 @@ DNA Database Search Project
 Isaac Long isaacglong@gmail.com 1-408-887-1628
 (Try inserting your contact info here as a test!)
 
-Here is my ultra mini tutorial on how to use git, with some links for 
+Here is my ultra mini tutorial on how to use Git, with some links for 
 downloading and installing Git and the Git GUI.
 
 Getting Set Up
@@ -90,7 +90,7 @@ top, saving it, and closing it again. Now we can try to push the changes
 and sync back to the online repository. The 'stages' for a push are as 
 follows:
  
-$ git add <filename>
+$ git add someFilename
 
 ^This file will now be tracked by Git
 
