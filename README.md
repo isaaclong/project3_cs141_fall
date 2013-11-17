@@ -19,9 +19,64 @@ the Git commands may be slightly different.
 
 http://git-scm.com/downloads
 
-Next download GitHub, which is the GUI. This simplifies (and visualizes) 
-some of the more tedious parts of the commands you would have to do via
-the command line.
+Next, download a Git GUI. This simplifies (and visualizes) some of the more 
+tedious parts of the commands you would have to do via the command line.
 
-(download for your OS) http://git-scm.com/downloads/guis
+(Download for your OS) http://git-scm.com/downloads/guis
+
+I already have a repository made for our projecti, and if you are reading
+this you are already a contributer. The following instructions are for a 
+linux terminal.
+
+Now, make a new directory in a location of your choice that you will use
+for our shared project 3 files and then navigate so that you are inside
+this directory. First we set some configs for git.  
+
+$ git config --global user.name "Your Legal Name Here"
+
+^This can be any name you want, does not need to match anything on your 
+github account 
+
+$ git config --global user.email "youremail@youremail.com"
+
+^This email needs to match the email you used when you signed up for a 
+github account
+
+There are some other configs you can set in this same manner, like a
+default text editor, but for now just stick with these.
+
+$ git init
+
+^This command will initialize the current directory to a local Git 
+repository (this should be the directory you made/chose).
+
+$ git remote add origin https://github.com/username/project3_cs141_fall
+
+^I am actually not sure if 'username' will be my username (isaaclong) or 
+your Github username. This just needs to match the url you see when looking
+at the repository online on Github.com. This command just connects your 
+directory to the online project repository project3_cs141_fall, so all 
+pushes or pulls you do will be to and from this online repository. It may
+ask you for your username/password credentials when you run this command.
+
+$ git remote -v
+
+^This will confirm that 'origin' is set to the address you provided for
+fetches and pushes.
+
+Sync Your Directory & Learn to Push
+----------------------------------- 
+
+At this point you can switch over to the GUI if you want, it (should) 
+recognize that you have a local repository that is now connected with the
+online repository on Github.com. The GUI should ask for your login
+information initially and then either find your activated directory 
+automatically or give you the ability to specify which directory you 'git 
+init'-ed.
+
+First we need to 'pull' in order to sync anything already in the online 
+repository to your directory.
+
+$ git pull origin master
+ 
 
