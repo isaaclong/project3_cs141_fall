@@ -108,19 +108,21 @@ master is the branch.
 So the basic order of operations for pushes/updating our shared files
 online is:
 
-*Make some changes to the files
-*git add - stages changes for commit
-*git commit - commits staged changes locally
-*git push - pushes committed changes to remote address we specified
+* Make some changes to the files
+* git add - stages changes for commit
+* git commit - commits staged changes locally
+* git push - pushes committed changes to remote address we specified
 
 This probably seems like a lot but it takes literally about 5 seconds once
 you get the hang of it. The more general order of operations is:
 
-*Call pull so that your directory files will be updated with the most
+* Call pull so that your directory files will be updated with the most
 recent changes in our shared files online
-*Make any changes you want
-*Push the changes back to the online files
+* Make any changes you want
+* Push the changes back to the online files
 
-Doing all this in the GUI is even faster. Pushes and Pulls can also specify
+Doing all this in the GUI is even faster, as after you make changes to 
+files in your directory, the sync/push can be done in one click. Pulls/
+syncs can also be done just as easily. Pushes and Pulls can also specify
 branches (other than master, which is the main branch). We can talk about
 branches together when we meet next.
