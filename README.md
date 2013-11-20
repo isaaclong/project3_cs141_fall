@@ -6,6 +6,9 @@ DNA Database Search Project
 Isaac Long isaacglong@gmail.com 1-408-887-1628
 
 Zachary Sells zsell001@ucr.edu 1-626-242-3802(I did it mom!)
+
+Patrick Ly-Vo plyvo001@ucr.edu 1-909-569-7795
+
 (Try inserting your contact info here as a test!)
 
 Here is my ultra mini tutorial on how to use Git, with some links for 
