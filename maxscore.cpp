@@ -52,20 +52,20 @@ double iterative_MaxScore(const string &ref, const string &query)
 {
     
     calc_table[0][0] = Node( 0, pair<int,int>(0, -1), false );
-    calc_table[1][0] = Node( score(ref[0], query[0]) - 0.2, pair<int,int>(0, 0), true );
-    calc_table[0][1] = Node( 0, pair<int,int>(0, 0), true );
+    calc_table[1][0] = Node( score(ref[0], query[0]) - 0.2, pair<int,int>(0, 0), false );
+    calc_table[0][1] = Node( 0, pair<int,int>(0, 0), false );
     
     
     //Generate the zero column
     for (int i = 2; i < calc_table[0].size(); i++)
     {
-        calc_table[0][i] = Node( 0, pair<int,int>(0,i-1), true);
+        calc_table[0][i] = Node( 0, pair<int,int>(0,i-1), false);
     }
     
     //Generate the zero row
     for (int i = 2; i < calc_table.size(); i++)
     {
-        calc_table[i][0] = Node( calc_table[i-1][0].score - 0.05 , pair<int,int>(i-1,0), true);
+        calc_table[i][0] = Node( calc_table[i-1][0].score - 0.05 , pair<int,int>(i-1,0), false);
     }
     
     //Make calculations
@@ -90,13 +90,13 @@ double iterative_MaxScore(const string &ref, const string &query)
             }
             else if ( insertion >= deletion && insertion >= substitution)
             {
-                Node cell(insertion, pair<int,int>(i-1, j), false);
+                Node cell(insertion, pair<int,int>(i-1, j), true);
                 calc_table[i][j] = cell;
             }
             
             else 
             {
-                Node cell(substitution, pair<int,int>(i-1, j-1), true);
+                Node cell(substitution, pair<int,int>(i-1, j-1), false);
                 calc_table[i][j] = cell;
             }
         }
